@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  mc:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+      OPS: "Karek,Majk"
+      MOTD: "Welcome to Dogtronic Craft"
+      SPAWN_PROTECTION: 0
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
